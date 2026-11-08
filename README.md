@@ -26,8 +26,10 @@ crates/
   hercules-db/ the store: api.rs (fixed contract) and lib.rs (yours)
   harness/     shared test helpers (src/lib.rs) and the provided tests (tests/stage*.rs)
   bench/       criterion benchmarks for Stages 2 and 3
-STAGE1.md      what to build first; later stages are handed over during the interview
-NOTES.md       a place to record the decisions you make
+STAGE1.md      Stage 1: runtime schemas and tenant isolation (start here)
+STAGE2.md      Stage 2: secondary indexes
+STAGE3.md      Stage 3: query planner
+NOTES.md       a place to note what you decided about gaps in the spec
 ```
 
 ## Working
@@ -54,5 +56,5 @@ well. Put them in `crates/hercules-db` (unit tests) or as new files under
   and SQL parsing. The store must be `Send + Sync`, but you don't need to
   optimise for concurrent throughput.
 - Use whatever AI tools you normally use, and narrate as you go.
-- The spec has gaps on purpose. When you hit one, make a call, tell us, and
-  note it in `NOTES.md`.
+- The spec has gaps on purpose. When you hit one, discuss it with your
+  interviewer before you decide.

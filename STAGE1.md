@@ -46,5 +46,5 @@ especially for cases the spec leaves open. `proptest` is available.
 
 ## Gaps in the spec
 
-They're deliberate. When you hit one, make a call, tell us what you chose, and
-write it down in `NOTES.md`.
+They're deliberate. When you hit one, raise it with your interviewer and talk
+it through before you decide. Note what you settled on in `NOTES.md`.
