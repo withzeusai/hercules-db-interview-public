@@ -1,0 +1,27 @@
+[workspace]
+resolver = "3"
+members = ["crates/hercules-db", "crates/harness", "crates/bench"]
+
+[workspace.package]
+edition = "2024"
+publish = false
+
+# The only crates you may use (plus std). Embedded databases are not allowed.
+[workspace.dependencies]
+hercules-db = { path = "crates/hercules-db" }
+rust_decimal = "1.43"
+thiserror = "2"
+parking_lot = "0.13"
+dashmap = "6"
+uuid = { version = "1", features = ["v4"] }
+crossbeam = "0.8"
+proptest = "1"
+criterion = "0.8"
+
+# Optimise dependencies in debug builds so tests over larger datasets stay quick,
+# while your own crate keeps fast compiles and full debug info.
+[profile.dev.package."*"]
+opt-level = 3
+
+[profile.release]
+debug = "line-tables-only"

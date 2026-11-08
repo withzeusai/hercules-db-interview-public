@@ -1,0 +1,18 @@
+[package]
+name = "hercules-db"
+version = "0.1.0"
+edition.workspace = true
+publish.workspace = true
+
+[dependencies]
+rust_decimal.workspace = true
+thiserror.workspace = true
+# Allowed and pre-fetched so you never need the network mid-interview.
+# Remove any you don't use.
+parking_lot.workspace = true
+dashmap.workspace = true
+uuid.workspace = true
+crossbeam.workspace = true
+
+[dev-dependencies]
+proptest.workspace = true
