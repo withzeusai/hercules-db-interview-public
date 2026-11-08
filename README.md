@@ -26,9 +26,7 @@ crates/
   hercules-db/ the store: api.rs (fixed contract) and lib.rs (yours)
   harness/     shared test helpers (src/lib.rs) and the provided tests (tests/stage*.rs)
   bench/       criterion benchmarks for Stages 2 and 3
-STAGE1.md      Stage 1: runtime schemas and tenant isolation (start here)
-STAGE2.md      Stage 2: secondary indexes
-STAGE3.md      Stage 3: query planner
+MILESTONES.md  the three stages: schemas, indexes, then a query planner (start here)
 NOTES.md       a place to note what you decided about gaps in the spec
 ```
 
